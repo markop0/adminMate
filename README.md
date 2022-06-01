@@ -1,6 +1,6 @@
 # adminMate
 
-封装了一些 admin 后台系统常见的一些组件、函数、样式的 admin web 开发库
+封装了一些开发 admin 后台系统常见的一些组件、函数、样式的 admin web 开发工具库，基于 element、echarts。
 
 ## Build Setup
 
