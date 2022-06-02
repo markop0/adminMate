@@ -51,6 +51,7 @@
         </svg>
       </a>
       adminMate
+      <div>{{ input }}</div>
       <el-input v-model="input" placeholder="请输入内容"></el-input>
       <!-- <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
        
