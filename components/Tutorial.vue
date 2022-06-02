@@ -116,18 +116,27 @@
         ></a>
       </div> -->
     </div>
-    <div class="test">
-      <BarChart
-        :key="chartData1 + 1"
-        :chartData="chartData1"
-        :refName="'chart1'"
-      ></BarChart>
-      <!-- <LineChart
+    <div class="flex">
+      <div class="test">
+        <BarChart
+          :key="'chartData1'"
+          :chartData="chartData1"
+          :refName="'chart1'"
+        ></BarChart>
+      </div>
+      <div class="test">
+        <BarChart
+          :key="'chartData2'"
+          :chartData="chartData2"
+          :refName="'chart2'"
+        ></BarChart>
+      </div>
+    </div>
+    <!-- <LineChart
         :key="chartData1 + 1"
         :chartData="chartData1"
         :refName="'chart1'"
       ></LineChart> -->
-    </div>
   </div>
 </template>
 
@@ -138,6 +147,7 @@ export default {
     return {
       input: "",
       chartData1: null,
+      chartData2: null,
     };
   },
   mounted() {
@@ -146,6 +156,15 @@ export default {
       data: [[18203, 23489, 29034, 104970, 131744, 630230]],
       series: ["2008"],
     };
+    this.chartData2 = {
+      xAxis: ["Brazil", "Indonesia", "USA", "India", "China", "World"],
+      data: [
+        [18203, 23489, 29034, 104970, 131744, 630230],
+        [19325, 23438, 31000, 121594, 134141, 681807],
+      ],
+      series: ["2008", "2022"],
+      isClaim: 1,
+    };
   },
 };
 </script>
@@ -153,5 +172,8 @@ export default {
 .test {
   width: 600px;
   height: 400px;
+}
+.flex {
+  display: flex;
 }
 </style>
