@@ -173,8 +173,8 @@ export default {
 </script>
 <style scoped>
 .test {
-  width: 600px;
-  height: 400px;
+  width: 360px;
+  height: 280px;
 }
 .flex {
   display: flex;
