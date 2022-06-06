@@ -119,24 +119,27 @@
     <div class="flex">
       <div class="test">
         <BarChart
-          key="chartData1"
+          :key="chartData1"
           :chartData="chartData1"
           :refName="'chart1'"
         ></BarChart>
       </div>
       <div class="test">
         <BarChart
-          key="chartData2"
+          :key="chartData2"
           :chartData="chartData2"
           :refName="'chart2'"
         ></BarChart>
       </div>
+      <div class="test">
+        <LineChart
+        :key="chartData2"
+        :chartData="chartData2"
+        :refName="'chart3'"
+      ></LineChart>
+      </div>
     </div>
-    <!-- <LineChart
-        :key="chartData1 + 1"
-        :chartData="chartData1"
-        :refName="'chart1'"
-      ></LineChart> -->
+   
   </div>
 </template>
 
