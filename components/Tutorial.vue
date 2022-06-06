@@ -3,10 +3,10 @@
   <div
     class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0"
   >
-    <link
+    <!-- <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"
       rel="stylesheet"
-    />
+    /> -->
     <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
       <a
         class="flex justify-center pt-8 sm:pt-0"
@@ -50,7 +50,7 @@
           />
         </svg>
       </a>
-      adminMate
+      admin-mate
       <div>{{ input }}</div>
       <el-input v-model="input" placeholder="请输入内容"></el-input>
       <!-- <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
@@ -119,14 +119,14 @@
     <div class="flex">
       <div class="test">
         <BarChart
-          :key="'chartData1'"
+          key="chartData1"
           :chartData="chartData1"
           :refName="'chart1'"
         ></BarChart>
       </div>
       <div class="test">
         <BarChart
-          :key="'chartData2'"
+          key="chartData2"
           :chartData="chartData2"
           :refName="'chart2'"
         ></BarChart>
