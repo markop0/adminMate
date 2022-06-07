@@ -13,6 +13,7 @@
 
 <script>
 export default {
+  name: "Pagination",
   props: {
     total: Number,
     sParam: {
