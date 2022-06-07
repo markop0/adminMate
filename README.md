@@ -33,9 +33,9 @@ Vue.component(LineChart.name, LineChart);
 
 ### component (组件)
 
-BarChart (柱状图).
-LineChart (折线图).
-Pagination (分页).
+- BarChart (柱状图).
+- LineChart (折线图).
+- Pagination (分页).
 
 ### function（函数）
 
