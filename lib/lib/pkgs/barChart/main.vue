@@ -9,6 +9,7 @@
 <script>
 import * as echarts from "echarts";
 export default {
+  name:'BarChart',
   props: {
     chartData: {
       type: Object,
@@ -96,5 +97,5 @@ export default {
 };
 </script>
  
-<style lang='scss' scoped >
+<style lang='scss' scoped>
 </style>

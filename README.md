@@ -4,6 +4,31 @@
 
 [demo](https://reedbf.github.io/adminMate/).
 
+## Install （安装）
+
+```shell
+npm install admin-mate
+```
+
+## Quick Start （快速使用）
+
+```javascript
+import Vue from "vue";
+//全局引用
+import AdminMate from "admin-mate";
+Vue.use(AdminMate);
+
+// or 局部引用
+import {
+  BarChart,
+  LineChart,
+  // ...
+} from "element-ui";
+
+Vue.component(BarChart.name, BarChart);
+Vue.component(LineChart.name, LineChart);
+```
+
 <!-- ## Build Setup
 
 ```bash

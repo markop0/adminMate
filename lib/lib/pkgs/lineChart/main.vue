@@ -11,6 +11,7 @@
 import * as echarts from "echarts";
 
 export default {
+  name: "LineChart",
   props: {
     chartData: {
       type: Object,
@@ -125,5 +126,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

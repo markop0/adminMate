@@ -50,7 +50,7 @@
           />
         </svg>
       </a>
-      admin-mate
+      <span @click="copyToClipboard('1+1=100*')">admin-mate</span>
       <div>{{ input }}</div>
       <el-input v-model="input" placeholder="请输入内容"></el-input>
       <!-- <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
@@ -133,13 +133,12 @@
       </div>
       <div class="test">
         <LineChart
-        :key="chartData2"
-        :chartData="chartData2"
-        :refName="'chart3'"
-      ></LineChart>
+          :key="chartData2"
+          :chartData="chartData2"
+          :refName="'chart3'"
+        ></LineChart>
       </div>
     </div>
-   
   </div>
 </template>
 

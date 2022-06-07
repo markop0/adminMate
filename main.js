@@ -4,5 +4,4 @@ import Vue from 'vue'
 import BarChart from './lib'
 import LineChart from './lib'
 // 使用插件
-Vue.use(BarChart);
-Vue.use(LineChart);
+Vue.use(BarChart, LineChart);
