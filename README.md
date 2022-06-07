@@ -31,18 +31,19 @@ Vue.component(LineChart.name, LineChart);
 
 ## content （内容）
 
-- component (组件)
+### component (组件)
 
-  BarChart
-  LineChart
-  Pagination
+BarChart.
+LineChart.
+Pagination.
 
-- function （函数）
-  isEmpty,
-  copyToClipboard,
-  deepClone,
-  objReset,
-  msg,
-  onlyNum,
-  onlyPlusNum,
-  numFormat
+### function （函数）
+
+isEmpty.
+copyToClipboard.
+deepClone.
+objReset.
+msg.
+onlyNum.
+onlyPlusNum.
+numFormat.
