@@ -72,6 +72,12 @@ module.exports = {
         path: 'function/',
         children: [ /* ... */],
         initialOpenGroupIndex: -1 // 可选的, 默认值是 0
+      },
+      {
+        title: '正则',
+        path: 'function/Regular',
+        children: [ /* ... */],
+        initialOpenGroupIndex: -1 // 可选的, 默认值是 0
       }
     ],
 

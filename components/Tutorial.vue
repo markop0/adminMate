@@ -160,8 +160,8 @@ export default {
 </script>
 <style scoped>
 .test {
-  width: 360px;
-  height: 280px;
+  width: 400px;
+  height: 300px;
 }
 .flex {
   display: flex;

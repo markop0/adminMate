@@ -3,7 +3,7 @@
     @size-change="sizeChange"
     @current-change="currentChange"
     :current-page="sParam.page"
-    :page-sizes="[10, 20, 50]"
+    :page-sizes="pageSizes"
     :page-size="sParam.pageSize"
     layout="total, sizes, prev, pager, next, jumper"
     :total="total"
@@ -19,6 +19,12 @@ export default {
     sParam: {
       type: Object,
     },
+    pageSizes: {
+      type: Array,
+      default: () => {
+        return [10, 20, 50];
+      },
+    },
   },
   methods: {
     sizeChange(val) {
@@ -28,6 +34,8 @@ export default {
     currentChange(val) {
       this.sParam.page = val;
       this.$emit("getPageData");
+      
+      
     },
   },
 };
