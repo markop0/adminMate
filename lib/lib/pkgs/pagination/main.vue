@@ -34,8 +34,6 @@ export default {
     currentChange(val) {
       this.sParam.page = val;
       this.$emit("getPageData");
-      
-      
     },
   },
 };
