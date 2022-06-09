@@ -4,7 +4,7 @@
 
 目前仅支持[echarts](https://echarts.apache.org/examples/zh/index.html#chart-type-bar)内基础柱状图的快速生成
 
-<img src="../.vuepress/public/img/barChart1.png">
+<img src="$withBase('../.vuepress/public/img/barChart1.png')">
 
 **代码示例**
 
