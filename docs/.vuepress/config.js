@@ -4,7 +4,7 @@ module.exports = {
   lang: 'zh-CN',
   title: 'admin-mate',
   description: '组件库',
-  base: '/adminMate/',
+  base: './',  //打包才开启
   head: [ // 注入到当前页面的 HTML <head> 中的标签
     [
       "script",
