@@ -145,6 +145,7 @@ export default {
       yAxis: ["Brazil", "Indonesia", "USA", "India", "China", "World"],
       data: [[18203, 23489, 29034, 104970, 131744, 630230]],
       series: ["2008"],
+      location:''
     };
     this.chartData2 = {
       xAxis: ["Brazil", "Indonesia", "USA", "India", "China", "World"],
@@ -154,6 +155,7 @@ export default {
       ],
       series: ["2008", "2022"],
       isClaim: 1,
+      location:''
     };
   },
 };

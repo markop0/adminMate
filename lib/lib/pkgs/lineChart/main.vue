@@ -25,6 +25,7 @@ export default {
   //             series: ["name", "name"],//数据类的图例名称
   //             smooth:bolean//是否曲线
   //             dataZoom:bolean//是否需要dataZoom
+  //             location:'' //图例显示位置
   //           };
   data() {
     return {
@@ -104,9 +105,14 @@ export default {
         yAxis: {
           type: "value",
         },
-
         series: obj,
       };
+      if (this.chartData.location == "right") {
+        option.legend["right"] = this.chartData.location;
+      } else if (this.chartData.location == "left") {
+        option.legend["left"] = this.chartData.location;
+      } else {
+      }
       this.chartData.dataZoom &&
         (option["dataZoom"] = [
           {

@@ -5,11 +5,11 @@
     element-loading-text="图表加载中"
   ></div>
 </template>
- 
+
 <script>
 import * as echarts from "echarts";
 export default {
-  name:'BarChart',
+  name: "BarChart",
   props: {
     chartData: {
       type: Object,
@@ -21,7 +21,9 @@ export default {
   //             xAxis: [],//x轴数据
   //             data: [[], []],//需要显示的数据类
   //             series: ["name", "name"],//数据类的图例名称
-  //             isClaim:String//柱状图显示样式
+  //             smooth:bolean//是否曲线
+  //             dataZoom:bolean//是否需要dataZoom
+  //             location:'' //图例显示位置
   //           };
   data() {
     return {
@@ -89,6 +91,12 @@ export default {
 
         series: obj,
       };
+      if (this.chartData.location == "right") {
+        option.legend["right"] = this.chartData.location;
+      } else if (this.chartData.location == "left") {
+        option.legend["left"] = this.chartData.location;
+      } else {
+      }
       console.log(option.xAxis);
 
       option && myChart.setOption(option);
@@ -96,6 +104,5 @@ export default {
   },
 };
 </script>
- 
-<style lang='scss' scoped>
-</style>
+
+<style lang="scss" scoped></style>
