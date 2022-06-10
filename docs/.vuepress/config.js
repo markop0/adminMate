@@ -4,8 +4,8 @@ module.exports = {
   lang: 'zh-CN',
   title: 'admin-mate',
   description: '组件库',
-  base: './',  //打包才开启
-  head: [ // 注入到当前页面的 HTML <head> 中的标签
+  base: '/adminMate/',  //打包才开启
+  head: [
     [
       "script",
       {
@@ -15,22 +15,23 @@ module.exports = {
     ['link', {
       rel: 'icon',
       href: '/img/logo.png'
-    }], // 增加一个自定义的 favicon(网页标签的图标)
+    }],
   ],
   // 主题和它的配置
   theme: '@vuepress/theme-default',
   themeConfig: {
     logo: '/img/logo.png',
     // displayAllHeaders: true,// 默认值：false
-    lastUpdated: 'Last Updated', // string | boolean
+    lastUpdated: 'Last Updated', // 最后更新时间 string | boolean
+    smoothScroll: true,
     // sidebarDepth: 2, // 侧边栏显示2级
     // darkMode: true,
 
     nav: [
-      {
-        text: 'Home',
-        link: '/'
-      },
+      // {
+      //   text: 'Home',
+      //   link: '/'
+      // },
       {
         text: '组件',
         link: '/components/'
@@ -39,6 +40,7 @@ module.exports = {
         text: '函数',
         link: '/function/'
       },
+      { text: 'GitHub', link: 'https://github.com/reedbf/adminMate' },
       // {
       //   text: 'Languages',
       //   ariaLabel: 'LanguageMenu',
@@ -51,8 +53,8 @@ module.exports = {
     // sidebar: 'auto',
     sidebar: [
 
-      //   // collapsable: false, // 可选的, 默认值是 true,
-      //   // sidebarDepth: 2,    // 可选的, 默认值是 1
+      // collapsable: false, // 可选的, 默认值是 true,
+      // sidebarDepth: 2,    // 可选的, 默认值是 1
 
       {
         title: '介绍',

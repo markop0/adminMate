@@ -30,3 +30,7 @@ import {
 Vue.component(BarChart.name, BarChart);
 Vue.component(LineChart.name, LineChart);
 ```
+
+::: warning 注意
+本项目基于 element、echarts ，在使用前必须先引用好 element 和 echarts。
+:::

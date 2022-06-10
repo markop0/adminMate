@@ -4,7 +4,7 @@
 
 目前仅支持[echarts](https://echarts.apache.org/examples/zh/index.html#chart-type-bar)内基础柱状图的快速生成
 
-<img src="$withBase('../.vuepress/public/img/barChart1.png')">
+<img src="../.vuepress/public/img/barChart1.png">
 
 **代码示例**
 
@@ -30,12 +30,13 @@ mounted() {
 
 **属性**
 
-| 参数    | 说明                          | 类型   | 是否必填 | 默认值 |
-| ------- | ----------------------------- | ------ | -------- | ------ |
-| xAxis   | x 轴数据名                    | array  | true     | —      |
-| data    | 数据，支持多组数据展示        | array  | true     | —      |
-| series  | 数据图例名称                  | array  | true     | —      |
-| isClaim | 图表显示样式（垂直/水平）显示 | number | false    | 0      |
+| 参数     | 说明                          | 类型   | 是否必填 | 默认值 | 可选值      |
+| -------- | ----------------------------- | ------ | -------- | ------ | ----------- |
+| xAxis    | x 轴数据名                    | array  | true     | —      |
+| data     | 数据，支持多组数据展示        | array  | true     | —      |
+| series   | 数据图例名称                  | array  | true     | —      |
+| isClaim  | 图表显示样式（垂直/水平）显示 | number | false    | 0      |
+| location | 图例显示位置                  | string | false    | center | left，right |
 
 ## LineChart (折线图)
 
@@ -71,14 +72,15 @@ mounted() {
 
 **属性**
 
-| 参数     | 说明                          | 类型   | 是否必填 | 默认值 |
-| -------- | ----------------------------- | ------ | -------- | ------ |
-| xAxis    | x 轴数据名                    | array  | true     | —      |
-| data     | 数据，支持多组数据展示        | array  | true     | —      |
-| series   | 数据图例名称                  | array  | true     | —      |
-| isClaim  | 图表显示样式（垂直/水平）显示 | number | false    | 0      |
-| smooth   | 是否曲线                      | bolean | false    | false  |
-| dataZoom | 是否需要 dataZoom             | bolean | false    | false  |
+| 参数     | 说明                          | 类型   | 是否必填 | 默认值 | 可选值      |
+| -------- | ----------------------------- | ------ | -------- | ------ | ----------- |
+| xAxis    | x 轴数据名                    | array  | true     | —      |             |
+| data     | 数据，支持多组数据展示        | array  | true     | —      |             |
+| series   | 数据图例名称                  | array  | true     | —      |             |
+| isClaim  | 图表显示样式（垂直/水平）显示 | number | false    | 0      |             |
+| smooth   | 是否曲线                      | bolean | false    | false  |             |
+| dataZoom | 是否需要 dataZoom             | bolean | false    | false  |             |
+| location | 图例显示位置                  | string | false    | center | left，right |
 
 ## Pagination (分页)
 

@@ -1,6 +1,9 @@
 # 正则操作
 
-- **说明**：该模块内全部方法会处理对应数据，只允许对应的数据输入
+**说明** : 该模块内全部方法会处理对应数据，只允许对应的数据输入，通常在 input 内的 :onkeyup 内直接调用
+
+## onlyNum (仅支持数字)
+
 - **示例**：
 
 ```html
@@ -14,6 +17,14 @@
 <!-- 此时input内只能输入数字 -->
 ```
 
-## onlyNum (仅支持数字)
-
 ## onlyPlusNum (仅支持正整数)
+
+- **示例**：
+
+```html
+<el-input
+  :onkeyup="onlyPlusNum()"
+  maxlength="11"
+  placeholder="请输入正整数"
+></el-input>
+```
