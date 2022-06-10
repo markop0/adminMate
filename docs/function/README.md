@@ -39,19 +39,19 @@ mounted() {
 ```js
 mounted() {
   let data = {name:'Tom',age:'18'}
-  let newData = this.deepClone('test data')  //此时 data 和 newData 相对独立
+  let newData = this.deepClone(data)  //此时 data 和 newData 相对独立
 },
 ```
 
 ## objReset (对象重置)
 
-- **说明**：该方法会把传入对象的属性的值给清空，属性的类型如果为数组则会变成空数组,其它类型的属性则全部变成空字符串
+- **说明**：该方法会把传入对象的属性的值给清空，属性的类型如果为数组则会变成空数组,其它类型的属性则全部变成空字符串，常用于接口传参 obj 的重置。
 - **示例**：
 
 ```js
 mounted() {
   let data = {name:'Tom',age:'18',favoriteFood:['米饭','棒棒糖']}
-  let newData = this.objReset(data)  //  {name:'',age:'',favoriteFood:[]}
+  let newData = this.objReset(data)  //  newData = { name:'' , age:'' , favoriteFood:[] }
 },
 ```
 
@@ -78,7 +78,7 @@ mounted() {
 
 ## numFormat (数值千分号格式化)
 
-- **说明**：该方法会把传入的数值千分号格式化，返回的值为字符串
+- **说明**：该方法会把传入的数值千分号格式化并返回，类型为字符串（通常用于金额的展示，或者数据大屏的数据展示）
 - **示例**：
 
 ```js
@@ -86,5 +86,3 @@ mounted() {
   console.log(this.numFormat(123456789))  // 123,456,789
 },
 ```
-
-

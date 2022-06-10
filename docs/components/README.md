@@ -9,7 +9,7 @@
 **代码示例**
 
 ```html
-<BarChart :key="chartData" :chartData="chartData"></BarChart>
+<BarChart :key="chartData + 1" :chartData="chartData" />
 ```
 
 ```js
@@ -47,17 +47,17 @@ mounted() {
 **代码示例**
 
 ```html
-<LineChart :key="chartData2" :chartData="chartData2"></LineChart>
+<LineChart :key="chartData + 1" :chartData="chartData" />
 ```
 
 ```js
 data() {
     return {
-      chartData2: null,
+      chartData: null,
     };
 },
 mounted() {
-  this.chartData2 = {
+  this.chartData = {
       xAxis: ["Brazil", "Indonesia", "USA", "India", "China", "World"],
       data: [
         [18203, 23489, 29034, 104970, 131744, 630230],

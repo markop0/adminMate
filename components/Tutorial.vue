@@ -118,13 +118,13 @@
     </div>
     <div class="flex">
       <div class="test">
-        <BarChart :key="chartData1" :chartData="chartData1"></BarChart>
+        <BarChart :key="chartData1 + 1" :chartData="chartData1" />
       </div>
       <div class="test">
-        <BarChart :key="chartData2" :chartData="chartData2"></BarChart>
+        <BarChart :key="chartData2 + 1" :chartData="chartData2" />
       </div>
       <div class="test">
-        <LineChart :key="chartData2" :chartData="chartData2"></LineChart>
+        <LineChart :key="chartData2 + 1" :chartData="chartData2" />
       </div>
     </div>
   </div>
