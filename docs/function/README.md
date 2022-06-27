@@ -55,10 +55,10 @@ mounted() {
 },
 ```
 
-## msg (消息)
+## msg (Message 消息提示)
 
 - **说明**：该方法精简了 element 的 Message 方法。
-  0/1/2；分别对应 element Message 里的 error，success，warning3 种状态;|
+  0/1/2/3；分别对应 element Message 里的 error，success，warning，infor 4 种状态;
 - **参数**：
 
   | 参数     | 说明                                  | 类型   | 是否必填 | 默认值 | 可选值 |
@@ -84,5 +84,28 @@ mounted() {
 ```js
 mounted() {
   console.log(this.numFormat(123456789))  // 123,456,789
+},
+```
+
+## isProduction （是否生产环境）
+
+- **说明**：该方法会返回是否生产环境的判断，类型为布尔值 true / false；（通常在动态配置正式环境与开发环境中使用）
+- **示例**：
+
+```js
+mounted() {
+  console.log(this.isProduction())  // true / false
+},
+```
+
+## getUrlParam （获取地址栏参数）
+
+- **说明**：该方法会返回从地址栏获取到的参数对象，类型为 obj
+- **示例**：
+
+```js
+// url = 'https://github.com/?name=adminMate&birthday=2022&base=China'
+mounted() {
+  let o = this.getUrlParam() // o = { base: "China" , birthday: "2022" , name: "adminMate" }
 },
 ```

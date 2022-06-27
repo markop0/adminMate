@@ -90,6 +90,7 @@
         <el-button @click="copyToClipboard('http://localhost:8010/')"
           >复制url</el-button
         >
+        <el-button @click="getUrlParam()">获取url参数</el-button>
       </div>
     </div>
   </div>
