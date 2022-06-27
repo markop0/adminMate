@@ -1,6 +1,6 @@
 {
   "name": "admin-mate",
-  "version": "1.0.0",
+  "version": "1.0.116",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
