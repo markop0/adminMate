@@ -111,22 +111,19 @@ mounted() {
 ```
 
 ## arrayDifference (比较两个数组之间的差异)
-
 - **说明**：该方法会根据需求返回输入两个数组的交集，并集，差集
 - **参数**：
 
-  | 参数      | 说明                 | 类型   | 是否必填 | 默认值 | 可选值                                                  |
-  | --------- | -------------------- | ------ | -------- | ------ | ------------------------------------------------------- |
-  | firstArr  | 用于比较的数组       | array  | true     | —      |                                                         |
-  | secondArr | 用于比较的数组       | array  | true     | —      |                                                         |
-  | judgement | 用于判断返回什么集合 | string | true     | —      | 'Union'(并集)，'Intersection'(交集)，'Difference'(差集) |
-
+  | 参数     | 说明                                  | 类型   | 是否必填 | 默认值 | 可选值 |
+  | -------- | ------------------------------------- | ------ | -------- | ------ | ------ |
+  | firstArr  | 用于比较的数组                        | array | true     | —      |        |
+  | secondArr | 用于比较的数组                        | array | true     | —      |        |           
+  | judgement | 用于判断返回什么集合                   | string | false    | —      | 默认求差集，传1时求并集   |
 - **示例**：
 
 ```js
-let firstArr = [1, 2, 3];
-let secondArr = [3, 4, 5];
-this.arrayDifference(firstArr, secondArr, "Union"); //返回[1,2,3,4,5] 并集
-this.arrayDifference(firstArr, secondArr, "Intersection"); //返回[3] 交集
-this.arrayDifference(firstArr, secondArr, "Difference"); //返回[1,2] 差集
+let firstArr = [1,2,3]
+let secondArr = [3,4,5]
+this.arrayDifference(firstArr,secondArr,1)//返回[3] 交集
+this.arrayDifference(firstArr,secondArr)//返回[1,2] 差集
 ```
