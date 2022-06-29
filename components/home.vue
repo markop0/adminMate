@@ -128,6 +128,10 @@ export default {
       isClaim: 1,
       location: "left",
     };
+
+    console.log(
+      this.arrayDifference([1, 2, 3, 4, 5], [2, 4, 5, 6, 7, 8], "Union")
+    );
   },
   methods: {
     getYzyCourse() {},
