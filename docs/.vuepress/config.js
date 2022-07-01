@@ -40,7 +40,9 @@ module.exports = {
         text: '函数',
         link: '/function/'
       },
+      { text: 'feedback', link: 'https://github.com/reedbf/adminMate/issues' },
       { text: 'GitHub', link: 'https://github.com/reedbf/adminMate' },
+
       // {
       //   text: 'Languages',
       //   ariaLabel: 'LanguageMenu',
