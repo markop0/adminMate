@@ -1,13 +1,13 @@
 <template>
   <div
-    class="relative flex flex-wrap items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0"
+    class="relative flex flex_ww items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0"
   >
     <!-- <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"
       rel="stylesheet"
     /> -->
     <div class="homeHead max-w-4xl mx-auto sm:px-6 lg:px-8">
-      <a
+      <!-- <a
         class="flex justify-center pt-8 sm:pt-0"
         href="https://nuxtjs.org"
         target="_blank"
@@ -19,9 +19,9 @@
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         ></svg>
-      </a>
+      </a> -->
       <span @click="copyToClipboard('1+1=100*')">admin-mate</span>
-      <div>{{ input }}</div>
+      <span>{{ input }}</span>
       <el-input v-model="input" placeholder="请输入内容"></el-input>
 
       <!-- <div class="flex justify-center pt-4 space-x-2">
@@ -62,35 +62,39 @@
       </div> -->
     </div>
     <div class="mainBox">
-      <div class="test">
+      <div class="box test">
         <BarChart :key="chartData1 + 1" :chartData="chartData1" />
       </div>
-      <div class="test">
+      <div class="box test">
         <BarChart :key="chartData2 + 1" :chartData="chartData2" />
       </div>
-      <div class="test">
+      <div class="box test">
         <LineChart :key="chartData2 + 1" :chartData="chartData2" />
       </div>
-      <div>
+      <div class="box w50p">
         <Pagination
           :total="courseTotal"
           :sParam="courseSinglList"
           @getPageData="getYzyCourse"
         />
-      </div>
-      <div>
-        <el-button type="success" @click="msg('成功按钮')">成功按钮</el-button>
-        <el-button type="info" @click="msg('成功按钮', 3)">信息按钮</el-button>
-        <el-button type="warning" @click="msg('警告按钮', 2)"
-          >警告按钮</el-button
-        >
-        <el-button type="danger" @click="msg('危险按钮', 0)"
-          >危险按钮</el-button
-        >
-        <el-button @click="copyToClipboard('http://localhost:8010/')"
-          >复制url</el-button
-        >
-        <el-button @click="getUrlParam()">获取url参数</el-button>
+        <div>
+          <el-button type="success" @click="msg('成功按钮')"
+            >成功按钮</el-button
+          >
+          <el-button type="info" @click="msg('成功按钮', 3)"
+            >信息按钮</el-button
+          >
+          <el-button type="warning" @click="msg('警告按钮', 2)"
+            >警告按钮</el-button
+          >
+          <el-button type="danger" @click="msg('危险按钮', 0)"
+            >危险按钮</el-button
+          >
+          <el-button @click="copyToClipboard('http://localhost:8010/')"
+            >复制url</el-button
+          >
+          <el-button @click="getUrlParam()">获取url参数</el-button>
+        </div>
       </div>
     </div>
   </div>
@@ -142,21 +146,15 @@ export default {
 .homeHead {
   width: 100vw;
 }
-.flex-wrap {
-  flex-wrap: wrap;
-}
 .test {
   width: 400px;
   height: 300px;
-}
-.flex {
-  display: flex;
 }
 .mainBox {
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
-  div {
+  .box {
     border: 1px solid #cbcbcb;
     min-width: 25vw;
     min-height: 16vw;
