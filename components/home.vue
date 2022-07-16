@@ -94,6 +94,9 @@
             >复制url</el-button
           >
           <el-button @click="getUrlParam()">获取url参数</el-button>
+          <el-button @click="secondConfirm('分组', delType, 330021, 3)"
+            >删除</el-button
+          >
         </div>
       </div>
     </div>
@@ -139,6 +142,9 @@ export default {
   },
   methods: {
     getYzyCourse() {},
+    delType(lsId, idx) {
+      //do something ...
+    },
   },
 };
 </script>

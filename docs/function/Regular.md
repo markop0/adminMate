@@ -28,3 +28,16 @@
   placeholder="请输入正整数"
 ></el-input>
 ```
+
+## numFormat (数值千分号格式化)
+
+- **说明**：该方法会把传入的数值千分号格式化并返回，类型为字符串（通常用于金额的展示，或者数据大屏的数据展示）
+- **示例**：
+
+```js
+mounted() {
+  console.log(this.numFormat(123456789))  // 123,456,789
+},
+```
+
+## PasswordChecking ()

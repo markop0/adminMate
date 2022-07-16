@@ -31,9 +31,9 @@ mounted() {
 },
 ```
 
-## deepClone (深拷贝)
+## deepClone (深拷贝 简单)
 
-- **说明**：该方法会返回一个深拷贝对象
+- **说明**：该方法会返回一个深拷贝对象（只适用简单数据类型对象深拷贝，String 、Number、Array；复杂数据类型对象禁止使用该方法，推荐使用下面的 deepCopy）
 - **示例**：
 
 ```js
@@ -43,9 +43,28 @@ mounted() {
 },
 ```
 
+## deepCopy (深拷贝 递归)
+
+- **说明**：该方法会返回一个深拷贝对象（适用全部数据类型对象深拷贝，String 、Number、Array、NaN、undefined、unction、Infinity、Date）
+- **示例**：
+
+```js
+mounted() {
+  let data = {
+    nan:NaN,
+    infinityMax:1.7976931348623157E+10308,
+    infinityMin:-1.7976931348623157E+10308,
+    undef: undefined,
+    fun: () => { console.log('叽里呱啦，阿巴阿巴') },
+    date:new Date,
+  }
+  let newData = this.deepCopy(data)  //此时 data 和 newData 相对独立
+},
+```
+
 ## objReset (对象重置)
 
-- **说明**：该方法会把传入对象的属性的值给清空，属性的类型如果为数组则会变成空数组,其它类型的属性则全部变成空字符串，常用于接口传参 obj 的重置。
+- **说明**：该方法会把传入对象的属性的值给清空，属性的类型如果为数组则会变成空数组,其它类型的属性则全部变成空字符串，并且该方法会自动重置对象中 page 字段重置为 1，pageSize 重置为 10 ，常用于接口传参 obj 的重置。
 - **示例**：
 
 ```js
@@ -76,16 +95,7 @@ mounted() {
 },
 ```
 
-## numFormat (数值千分号格式化)
 
-- **说明**：该方法会把传入的数值千分号格式化并返回，类型为字符串（通常用于金额的展示，或者数据大屏的数据展示）
-- **示例**：
-
-```js
-mounted() {
-  console.log(this.numFormat(123456789))  // 123,456,789
-},
-```
 
 ## isProduction （是否生产环境）
 
@@ -110,7 +120,7 @@ mounted() {
 },
 ```
 
-## arrayDifference (比较两个数组之间的差异)
+## arrayDifference (比较两数组间的差异)
 
 - **说明**：该方法会根据需求返回输入两个数组的交集，并集，差集
 - **参数**：
@@ -128,4 +138,30 @@ let firstArr = [1, 2, 3];
 let secondArr = [3, 4, 5];
 this.arrayDifference(firstArr, secondArr, 1); //返回[3] 交集
 this.arrayDifference(firstArr, secondArr); //返回[1,2] 差集
+```
+
+## secondConfirm（二次确认）
+
+- **说明**：该方法会弹出 element 的二次确认弹窗
+- **参数**：
+
+  | 参数  | 说明                               | 类型     | 是否必填 | 默认值 | 可选值 |
+  | ----- | ---------------------------------- | -------- | -------- | ------ | ------ |
+  | word  | 删除对象的名称，('文件','数据'...) | string   | true     | —      | —      |
+  | func  | 点击确认后执行的函数               | function | true     | —      | —      |
+  | param | 主要参数                           | function | true     | —      | —      |
+  | p1    | 额外参数                           | any      | false    | null   | —      |
+
+- **示例**：
+
+```vue
+<el-button
+  @click="secondConfirm('分组', delType, item.groupId, index)"
+>删除</el-button>
+```
+
+```js
+delType(lsId, idx) {
+  //do something ...
+}
 ```
