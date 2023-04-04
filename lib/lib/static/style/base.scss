@@ -379,11 +379,14 @@
     }
   }
 }
+
 .label_index {
   width: 60px;
-  /deep/input {
+  ::v-deep input {
     padding: 0;
     text-align: center;
+    background: red;
+    padding: 50px;
   }
 }
 .service_more {
@@ -436,12 +439,12 @@
   background: var(--bc1) !important;
 }
 .proportion {
-  /deep/.el-input__inner {
+  ::v-deep .el-input__inner {
     width: 70px;
     text-align: center;
   }
 }
-/deep/.el-tabs__item {
+::v-deep .el-tabs__item {
   font-size: 18px !important;
 }
 /*  allpage  ***************************************************************************************************/
@@ -542,7 +545,7 @@ circle {
     background: #f74040;
     margin-bottom: 15px;
 
-    /deep/ .el-card__body {
+    ::v-deep .el-card__body {
       padding-top: 0;
       padding-bottom: 0;
     }

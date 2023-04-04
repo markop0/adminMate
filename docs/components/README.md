@@ -125,6 +125,8 @@ methods: {
 | total     | 总条目数                     | number | true     | —            |
 | getParam  | 查询参数                     | object | true     | —            |
 | pageSizes | 每页显示个数选择器的选项设置 | array  | false    | [10, 20, 50] |
+| size      | '每页条数'字段名             | string | false    | pageSize     |
+| current   | '当前页'字段名               | string | false    | page         |
 
 **事件**
 

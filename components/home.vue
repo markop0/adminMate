@@ -1,6 +1,14 @@
 <template>
   <div
-    class="relative flex flex_ww items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0"
+    class="
+      relative
+      flex flex_ww
+      items-top
+      justify-center
+      min-h-screen
+      bg-gray-100
+      sm:items-center sm:pt-0
+    "
   >
     <!-- <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"
@@ -98,6 +106,9 @@
             >删除</el-button
           >
         </div>
+      </div>
+      <div class="box test">
+        <InsideSwitch />
       </div>
     </div>
   </div>

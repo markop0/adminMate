@@ -364,9 +364,10 @@
     background: #f74040;
     margin-bottom: 15px;
 
-    /deep/ .el-card__body {
+    ::v-deep .el-card__body {
       padding-top: 0;
       padding-bottom: 0;
+      background: #f74040;
     }
   }
 

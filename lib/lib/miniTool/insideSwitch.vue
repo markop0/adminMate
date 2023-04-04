@@ -15,7 +15,6 @@
 </template>
  
 <script>
-import {} from "@/api";
 export default {
   props: {
     wi: {
@@ -49,7 +48,7 @@ export default {
 </script>
  
 <style lang='scss' scoped >
-// /deep/ .sOpen .el-switch__core {
+// ::v-deep  .sOpen .el-switch__core {
 //   border-radius: 50px;
 //   &::before {
 //     counter-reset: progress var(--sTrue);
@@ -61,7 +60,7 @@ export default {
 //     background: var(--red);
 //   }
 // }
-// /deep/ .sClose .el-switch__core {
+// ::v-deep  .sClose .el-switch__core {
 //   border-radius: 50px;
 //   &::before {
 //     counter-increment: progress var(--false);
@@ -73,7 +72,7 @@ export default {
 //     color: #fff;
 //   }
 // }
-/deep/ .sOpen {
+::v-deep .sOpen {
   .el-switch__label--left {
     margin-right: -56%;
     z-index: 1;
@@ -83,7 +82,7 @@ export default {
     display: none;
   }
 }
-/deep/ .sClose {
+::v-deep .sClose {
   margin-left: -35px;
   .el-switch__label--left {
     display: none;

@@ -25,14 +25,24 @@ export default {
         return [10, 20, 50];
       },
     },
+    size: {
+      type: String,
+      default: "pageSize",
+    },
+    current: {
+      type: String,
+      default: "page",
+    },
   },
   methods: {
+    // 每页条数change
     sizeChange(val) {
-      this.sParam.pageSize = val;
+      this.sParam[this.size] = val;
       this.$emit("getPageData");
     },
+    // 当前页change
     currentChange(val) {
-      this.sParam.page = val;
+      this.sParam[this.current] = val;
       this.$emit("getPageData");
     },
   },
