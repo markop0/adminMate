@@ -95,8 +95,6 @@ mounted() {
 },
 ```
 
-
-
 ## isProduction （是否生产环境）
 
 - **说明**：该方法会返回是否生产环境的判断，类型为布尔值 true / false；（通常在动态配置正式环境与开发环境中使用）
@@ -164,4 +162,21 @@ this.arrayDifference(firstArr, secondArr); //返回[1,2] 差集
 delType(lsId, idx) {
   //do something ...
 }
+```
+
+## shuffleArray （数组随机打乱）
+
+- **说明**：该方法会随机打乱目标数组
+- **参数**：
+
+  | 参数  | 说明           | 类型  | 是否必填 | 默认值 | 可选值 |
+  | ----- | -------------- | ----- | -------- | ------ | ------ |
+  | array | 需要打乱的数组 | array | true     | —      | —      |
+
+- **示例**：
+
+```js
+const myArray = [1, 2, 3, 4, 5];
+shuffleArray(myArray);
+console.log(myArray); // 随机打乱后的数组
 ```
